@@ -2831,7 +2831,62 @@ oroca_edubot.menu.DebugLevel.debug.build.code_debug=4
 oroca_edubot.menu.DebugLevel.verbose=Verbose
 oroca_edubot.menu.DebugLevel.verbose.build.code_debug=5
 
+##############################################################
 
+robotis_commxel_w.name=ROBOTIS CommXEL-W
+
+robotis_commxel_w.upload.tool=esptool_py
+robotis_commxel_w.upload.maximum_size=1310720
+robotis_commxel_w.upload.maximum_data_size=327680
+robotis_commxel_w.upload.wait_for_upload_port=true
+
+robotis_commxel_w.serial.disableDTR=true
+robotis_commxel_w.serial.disableRTS=true
+
+robotis_commxel_w.build.mcu=esp32
+robotis_commxel_w.build.core=esp32
+robotis_commxel_w.build.variant=robotis_commxel_w
+robotis_commxel_w.build.board=CommXEL_W
+
+robotis_commxel_w.build.f_cpu=240000000L
+robotis_commxel_w.build.flash_mode=dio
+robotis_commxel_w.build.flash_size=4MB
+robotis_commxel_w.build.boot=dio
+robotis_commxel_w.build.partitions=default
+robotis_commxel_w.build.defines=
+
+robotis_commxel_w.menu.FlashFreq.80=80MHz
+robotis_commxel_w.menu.FlashFreq.80.build.flash_freq=80m
+robotis_commxel_w.menu.FlashFreq.40=40MHz
+robotis_commxel_w.menu.FlashFreq.40.build.flash_freq=40m
+
+robotis_commxel_w.menu.UploadSpeed.921600=921600
+robotis_commxel_w.menu.UploadSpeed.921600.upload.speed=921600
+robotis_commxel_w.menu.UploadSpeed.115200=115200
+robotis_commxel_w.menu.UploadSpeed.115200.upload.speed=115200
+robotis_commxel_w.menu.UploadSpeed.256000.windows=256000
+robotis_commxel_w.menu.UploadSpeed.256000.upload.speed=256000
+robotis_commxel_w.menu.UploadSpeed.230400.windows.upload.speed=256000
+robotis_commxel_w.menu.UploadSpeed.230400=230400
+robotis_commxel_w.menu.UploadSpeed.230400.upload.speed=230400
+robotis_commxel_w.menu.UploadSpeed.460800.linux=460800
+robotis_commxel_w.menu.UploadSpeed.460800.macosx=460800
+robotis_commxel_w.menu.UploadSpeed.460800.upload.speed=460800
+robotis_commxel_w.menu.UploadSpeed.512000.windows=512000
+robotis_commxel_w.menu.UploadSpeed.512000.upload.speed=512000
+
+robotis_commxel_w.menu.DebugLevel.none=None
+robotis_commxel_w.menu.DebugLevel.none.build.code_debug=0
+robotis_commxel_w.menu.DebugLevel.error=Error
+robotis_commxel_w.menu.DebugLevel.error.build.code_debug=1
+robotis_commxel_w.menu.DebugLevel.warn=Warn
+robotis_commxel_w.menu.DebugLevel.warn.build.code_debug=2
+robotis_commxel_w.menu.DebugLevel.info=Info
+robotis_commxel_w.menu.DebugLevel.info.build.code_debug=3
+robotis_commxel_w.menu.DebugLevel.debug=Debug
+robotis_commxel_w.menu.DebugLevel.debug.build.code_debug=4
+robotis_commxel_w.menu.DebugLevel.verbose=Verbose
+robotis_commxel_w.menu.DebugLevel.verbose.build.code_debug=5
 
 ##############################################################
 
