@@ -11,15 +11,15 @@
         {
           "category": "ESP32", 
           "name": "esp32 for XELNetwork", 
-          "url": "https://github.com/espressif/arduino-esp32/releases/download/0.0.1/esp32_XELNetwork.zip",
-          "checksum": "SHA-256: ", 
-          "size": " ",
+          "url": "https://github.com/espressif/arduino-esp32/releases/download/0.0.1/esp32_XELNetwork.tar.bz2",
+          "checksum": "SHA-256:E2C60482BC908F2C6B38FF4008404B4C5E24754DE08B745D667D087D439AFE5F", 
+          "size": "33170820",
           "help": {
             "online": ""
           }, 
           "version": "0.0.1", 
           "architecture": "esp32", 
-          "archiveFileName": "esp32_XELNetwork.zip", 
+          "archiveFileName": "esp32_XELNetwork.tar.bz2", 
           "boards": [
             {
               "name": "CommXEL-W"
