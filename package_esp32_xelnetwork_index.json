@@ -13,7 +13,7 @@
         {
           "category": "ESP32", 
           "name": "esp32 for XELNetwork", 
-          "url": "https://github.com/espressif/arduino-esp32/releases/download/0.0.1/esp32_XELNetwork.tar.bz2",
+          "url": "https://github.com/ROBOTIS-GIT/arduino-esp32/releases/download/0.0.1/esp32_XELNetwork.tar.bz2",
           "checksum": "SHA-256:BB17191541BB9BC822B1540D2A3321D5DFED4A9852C6AB46CDC4D4F2ABA5BA64", 
           "size": "33171316",
           "help": {
