@@ -1,7 +1,9 @@
 {
   "packages": [
     {
-      "maintainer": "ROBOTIS, Espressif Systems", 
+      "name": "esp32_XELNetwork",
+      "maintainer": "ROBOTIS, Espressif Systems",
+      "email": "",
       "help": {
         "online": "https://xelnetwork.readthedocs.io/",
         "online1": "http://esp32.com"
@@ -216,9 +218,7 @@
             }
           ]
         }
-      ], 
-      "email": "hristo@espressif.com", 
-      "name": "esp32"
+      ]
     }
   ]
 }
