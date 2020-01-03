@@ -1,4 +1,4 @@
-name=ESP32 Arduino
+name=ESP32 Arduino (only XELNetwork version)
 version=
 
 
