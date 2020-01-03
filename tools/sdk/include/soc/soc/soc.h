@@ -72,6 +72,8 @@
 #define SOC_EXTRAM_DATA_LOW     0x3F800000
 #define SOC_EXTRAM_DATA_HIGH    0x3FC00000
 
+#define SOC_MAX_CONTIGUOUS_RAM_SIZE 0x400000 ///< Largest span of contiguous memory (DRAM or IRAM) in the address space
+
 
 #define DR_REG_DPORT_BASE                       0x3ff00000
 #define DR_REG_AES_BASE                         0x3ff01000
@@ -145,7 +147,7 @@
 
 #define IS_DPORT_REG(_r) (((_r) >= DR_REG_DPORT_BASE) && (_r) <= DR_REG_DPORT_END)
 
-#if !defined( BOOTLOADER_BUILD ) && !defined( CONFIG_FREERTOS_UNICORE ) && defined( ESP_PLATFORM )
+#if !defined( BOOTLOADER_BUILD ) && defined( CONFIG_ESP32_DPORT_WORKAROUND ) && defined( ESP_PLATFORM )
 #define ASSERT_IF_DPORT_REG(_r, OP)  TRY_STATIC_ASSERT(!IS_DPORT_REG(_r), (Cannot use OP for DPORT registers use DPORT_##OP));
 #else
 #define ASSERT_IF_DPORT_REG(_r, OP)

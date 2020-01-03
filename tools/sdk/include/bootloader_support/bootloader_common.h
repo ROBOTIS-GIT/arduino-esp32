@@ -24,28 +24,20 @@ typedef enum {
 } esp_comm_gpio_hold_t;
 
 /**
- * @brief Calculate crc for the OTA data select.
+ * @brief Calculate crc for the OTA data partition.
  *
- * @param[in] s The OTA data select.
+ * @param[in] ota_data The OTA data partition.
  * @return    Returns crc value.
  */
 uint32_t bootloader_common_ota_select_crc(const esp_ota_select_entry_t *s);
 
 /**
- * @brief Verifies the validity of the OTA data select
+ * @brief Verifies the validity of the OTA data partition
  *
- * @param[in] s The OTA data select.
+ * @param[in] ota_data The OTA data partition.
  * @return    Returns true on valid, false otherwise.
  */
 bool bootloader_common_ota_select_valid(const esp_ota_select_entry_t *s);
-
-/**
- * @brief Returns true if OTADATA is not marked as bootable partition.
- *
- * @param[in] s The OTA data select.
- * @return    Returns true if OTADATA invalid, false otherwise.
- */
-bool bootloader_common_ota_select_invalid(const esp_ota_select_entry_t *s);
 
 /**
  * @brief Check if the GPIO input is a long hold or a short hold.
@@ -102,25 +94,25 @@ bool bootloader_common_label_search(const char *list, char *label);
 esp_err_t bootloader_common_get_sha256_of_partition(uint32_t address, uint32_t size, int type, uint8_t *out_sha_256);
 
 /**
- * @brief Returns the number of active otadata.
+ * @brief Check if the image (bootloader and application) has valid chip ID and revision
  *
- * @param[in] two_otadata Pointer on array from two otadata structures.
- *
- * @return The number of active otadata (0 or 1).
- *        - -1: If it does not have active otadata.
+ * @param img_hdr: image header
+ * @return
+ *      - ESP_OK: image and chip are matched well
+ *      - ESP_FAIL: image doesn't match to the chip
  */
-int bootloader_common_get_active_otadata(esp_ota_select_entry_t *two_otadata);
+esp_err_t bootloader_common_check_chip_validity(const esp_image_header_t* img_hdr);
+
 
 /**
- * @brief Returns esp_app_desc structure for app partition. This structure includes app version.
- * 
- * Returns a description for the requested app partition.
- * @param[in] partition      App partition description.
- * @param[out] app_desc      Structure of info about app.
- * @return
- *  - ESP_OK:                Successful.
- *  - ESP_ERR_INVALID_ARG:   The arguments passed are not valid.
- *  - ESP_ERR_NOT_FOUND:     app_desc structure is not found. Magic word is incorrect.
- *  - ESP_FAIL:              mapping is fail.
+ * @brief Configure VDDSDIO, call this API to rise VDDSDIO to 1.9V when VDDSDIO regulator is enabled as 1.8V mode.
  */
-esp_err_t bootloader_common_get_partition_description(const esp_partition_pos_t *partition, esp_app_desc_t *app_desc);
+void bootloader_common_vddsdio_configure();
+
+/**
+ * @brief Set the flash CS setup and hold time.
+ *
+ * CS setup time is recomemded to be 1.5T, and CS hold time is recommended to be 2.5T.
+ * cs_setup = 1, cs_setup_time = 0; cs_hold = 1, cs_hold_time = 1
+ */
+void bootloader_common_set_flash_cs_timing();
