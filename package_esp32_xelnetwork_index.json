@@ -12,8 +12,8 @@
           "category": "ESP32", 
           "name": "esp32 for XELNetwork", 
           "url": "https://github.com/espressif/arduino-esp32/releases/download/0.0.1/esp32_XELNetwork.tar.bz2",
-          "checksum": "SHA-256:E2C60482BC908F2C6B38FF4008404B4C5E24754DE08B745D667D087D439AFE5F", 
-          "size": "33170820",
+          "checksum": "SHA-256:BB17191541BB9BC822B1540D2A3321D5DFED4A9852C6AB46CDC4D4F2ABA5BA64", 
+          "size": "33171316",
           "help": {
             "online": ""
           }, 

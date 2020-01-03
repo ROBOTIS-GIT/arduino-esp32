@@ -1,10 +1,9 @@
 name=ESP32 Arduino
 version=
 
-runtime.tools.xtensa-esp32-elf-gcc.path.linux={runtime.platform.path}/tools/xtensa-esp32-elf-gcc/1.22.0-80-g6c4433a-5.2.0/linux
-runtime.tools.xtensa-esp32-elf-gcc.path.windows={runtime.platform.path}/tools/xtensa-esp32-elf-gcc/1.22.0-80-g6c4433a-5.2.0/win
 
-tools.esptool_py.path={runtime.platform.path}/tools/esptool_py/2.6.1
+
+tools.esptool_py.path={runtime.tools.esptool_py.path}
 tools.esptool_py.cmd=esptool
 tools.esptool_py.cmd.linux=esptool.py
 tools.esptool_py.cmd.windows=esptool.exe
