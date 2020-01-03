@@ -29,17 +29,17 @@
           ], 
           "toolsDependencies": [
             {
-              "packager": "esp32", 
+              "packager": "esp32_XELNetwork", 
               "version": "1.22.0-80-g6c4433a-5.2.0", 
               "name": "xtensa-esp32-elf-gcc"
             }, 
             {
-              "packager": "esp32", 
+              "packager": "esp32_XELNetwork", 
               "version": "2.6.1", 
               "name": "esptool_py"
             }, 
             {
-              "packager": "esp32", 
+              "packager": "esp32_XELNetwork", 
               "version": "0.2.3", 
               "name": "mkspiffs"
             }
